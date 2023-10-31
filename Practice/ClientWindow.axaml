@@ -5,12 +5,12 @@
              mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
              x:Class="Practice.ClientWindow">
     <Grid>
-        <Button Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White">
+        <Button Name="AddBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" Click="AddBtn_OnClick" >
             <StackPanel Orientation="Vertical">
                 <Image Source="C:\Users\lonah\RiderProjects\Practice\Practice\Icons\square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0" Background="White" >
+        <Button Name="DeleteBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0" Background="White" Click="DeleteBtn_OnClick" >
             <StackPanel Orientation="Vertical">
                 <Image Source="C:\Users\lonah\RiderProjects\Practice\Practice\Icons\square-minus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
             </StackPanel>
@@ -22,6 +22,7 @@
         </Button>
         <DataGrid Name="ClientDataGrid" x:CompileBindings="False" Margin="0 30 0 0 ">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClientID }"/>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname }"/>
                 <DataGridTextColumn Header="Имя" Binding="{Binding  Firstname}"/>
                 <DataGridTextColumn Header="Дата рождения" Binding="{Binding  Birthday}"/>

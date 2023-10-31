@@ -2,8 +2,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="600"
         x:Class="Practice.AddWindow"
         Title="Добавление аккаунта">
-    Welcome to Avalonia!
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Фамилия" HorizontalAlignment="Center"/>
+        <TextBox Name="SurnameTxt" Width="150"></TextBox>
+        <TextBlock  Text="Имя" HorizontalAlignment="Center"/>
+        <TextBox Name="NameTxt" Width="150"></TextBox>
+        <TextBlock Text="Дата рождения" HorizontalAlignment="Center"/>
+        <CalendarDatePicker Name="BirthdayPicker" Width="150"></CalendarDatePicker>
+        <TextBlock Text="Телефон" HorizontalAlignment="Center"/>
+        <TextBox Name="PhoneTxt" Width="150"></TextBox>
+        <TextBlock Text="Почта" HorizontalAlignment="Center"/>
+        <TextBox Name="EmailTxt" Width="150"></TextBox>
+        <TextBlock Text="Потребности" HorizontalAlignment="Center"/>
+        <TextBox Name="NeedTxt" Width="150" Height="50"></TextBox>
+        <TextBlock Text="Опыт изучения" HorizontalAlignment="Center"/>
+        <ComboBox Name="ExperienceCmb" Width="150"></ComboBox>
+        <TextBlock Text="Уровень языка" HorizontalAlignment="Center"/>
+        <ComboBox Name="LevelCmb" Width="150"></ComboBox>
+        <TextBlock Text="Логин" HorizontalAlignment="Center"/>
+        <TextBox Name="LoginTxt" Width="150"></TextBox>
+        <TextBlock Text="Пароль" HorizontalAlignment="Center"/>
+        <TextBox Name="PassTxt" Width="150"></TextBox>
+        <Button Name="AddClientBtn" Width="150" Content="Добавить" HorizontalContentAlignment="Center" Margin="0 10 0 0" Background="Lavender" Click="AddClientBtn_OnClick"></Button>
+    </StackPanel>
 </Window>
