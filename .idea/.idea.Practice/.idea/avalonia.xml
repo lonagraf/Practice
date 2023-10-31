@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Practice/AddWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/AdminWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/App.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/AuthWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/ClientWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/CourseWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/MainWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/PaymentWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/RegistrationWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/ReportWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/UserControl1.axaml" value="Practice/Practice.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
