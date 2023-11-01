@@ -75,7 +75,6 @@ public partial class ClientWindow : UserControl
         catch (Exception ex)
         {
             Console.WriteLine("Ошибка при удалении: " + ex.Message);
-            throw;
         }
     }
 

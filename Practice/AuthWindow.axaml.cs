@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Practice;
 
-public partial class AuthWindow : Window
+public partial class AuthWindow : MainWindow
 {
     public AuthWindow()
     {
@@ -42,7 +42,9 @@ public partial class AuthWindow : Window
             var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Вы успешно вошли", ButtonEnum.Ok);
             var result = box.ShowAsync();
             this.Hide();
-            MainWindow mainWindow = new MainWindow();
+            string username = GetUserNameFromDatabase(loginUser); 
+            MainWindow mainWindow = new MainWindow(); 
+            mainWindow.DisplayWelcomeMessage(username); 
             mainWindow.Show();
         }
         else
@@ -51,4 +53,5 @@ public partial class AuthWindow : Window
             var result = box.ShowAsync();
         }
     }
+    
 }
