@@ -36,4 +36,32 @@
       <None Remove="Icons\pen-square.png" />
       <Resource Include="Icons\pen-square.png" />
     </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Clients\AddClientWindow.axaml.cs">
+        <DependentUpon>AddClientWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Clients\EditClientWindow.axaml.cs">
+        <DependentUpon>EditClientWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Courses\CourseWindow.axaml.cs">
+        <DependentUpon>CourseWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Clients\ClientWindow.axaml.cs">
+        <DependentUpon>ClientWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Reports\ReportWindow.axaml.cs">
+        <DependentUpon>ReportWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Payments\PaymentWindow.axaml.cs">
+        <DependentUpon>PaymentWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

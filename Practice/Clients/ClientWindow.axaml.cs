@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
@@ -19,9 +20,9 @@ public partial class ClientWindow : UserControl
     private List<Client> _clients;
 
     public string fullTable =
-        "select client_id, surname, firstname, birthday, phone_number, email, language_need, experience_name, level_name from practice.client " +
-        "join practice.language_experience on client.language_experience = language_experience.language_experience_id " +
-        "join practice.language_level on client.language_level = language_level.language_level_id;";
+        "select client_id, surname, firstname, birthday, phone_number, email, language_need, experience_name, level_name from pro1_4.client " +
+        "join pro1_4.language_experience on client.language_experience = language_experience.language_experience_id " +
+        "join pro1_4.language_level on client.language_level = language_level.language_level_id;";
     public ClientWindow()
     {
         InitializeComponent();
@@ -57,7 +58,7 @@ public partial class ClientWindow : UserControl
 
     private void AddBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        AddWindow addWindow = new AddWindow();
+        AddClientWindow addWindow = new AddClientWindow();
         addWindow.Show();
     }
 
@@ -66,7 +67,7 @@ public partial class ClientWindow : UserControl
         try
         {
             _database.openConnection();
-            string sql = "delete from practice.client where client_id = @clientId;";
+            string sql = "delete from pro1_4.client where client_id = @clientId;";
             MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
             command.Parameters.AddWithValue("@clientId", id);
             command.ExecuteNonQuery();
@@ -112,5 +113,28 @@ public partial class ClientWindow : UserControl
             Console.WriteLine("Ошибка при удалении: " + ex.Message);
             throw;
         }
+    }
+
+    private void EditBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Client selectedClient = ClientDataGrid.SelectedItem as Client;
+        if (selectedClient != null)
+        {
+            EditClientWindow editClientWindow = new EditClientWindow(selectedClient);
+            editClientWindow.Show();
+            ShowTable(fullTable);
+        }
+        else
+        {
+            var box = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Выберите клиента для редактирования!", ButtonEnum.Ok);
+            var result = box.ShowAsync();
+        }
+        
+    }
+
+    private void SearchTxt_OnTextChanged(object? sender, TextChangedEventArgs e)
+    {
+        List<Client> search = _clients.Where(x => x.Surname.ToString().Contains(SearchTxt.Text.ToString())).ToList();
+        ClientDataGrid.ItemsSource = search;
     }
 }

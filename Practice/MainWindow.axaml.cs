@@ -4,6 +4,8 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using MySql.Data.MySqlClient;
+using Practice.Groups;
+using Practice.Teachers;
 
 namespace Practice;
 
@@ -48,7 +50,7 @@ public partial class MainWindow : Window
     {
         string username = ""; 
         _database.openConnection(); 
-        string sql = "SELECT firstname FROM practice.client WHERE login = @login;";
+        string sql = "SELECT firstname FROM pro1_4.client WHERE login = @login;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@login", login);
         var result = command.ExecuteScalar();
@@ -69,5 +71,19 @@ public partial class MainWindow : Window
         {
             WelcomeTxt.Text = "Добро пожаловать!";
         }
+    }
+
+    private void TeacherBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        TeacherWindow teacherWindow = new TeacherWindow();
+        MainPanel.Children.Add(teacherWindow);
+    }
+
+    private void GroupBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        GroupWindow groupWindow = new GroupWindow();
+        MainPanel.Children.Add(groupWindow);
     }
 }

@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
+             x:Class="Practice.ClientWindow">
+    <Grid>
+        <Button Name="AddBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" Click="AddBtn_OnClick" >
+            <StackPanel Orientation="Vertical">
+                <!--<Image Source="/Icons/square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
+                <TextBlock>+</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button Name="DeleteBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0" Background="White" Click="DeleteBtn_OnClick" >
+            <StackPanel Orientation="Vertical">
+                <!--<Image Source="/Icons/square-minus.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
+                <TextBlock>-</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button Name="EditBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60 0 0 0" Background="White" Click="EditBtn_OnClick">
+            <StackPanel Orientation="Vertical">
+                <!--<Image Source="/Icons/pen-square.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
+                <TextBlock>Edit</TextBlock>
+            </StackPanel>
+        </Button>
+        <TextBox Name="SearchTxt" Width="150" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100 0 0 0" TextChanged="SearchTxt_OnTextChanged"></TextBox>
+        <DataGrid Name="ClientDataGrid" x:CompileBindings="False" Margin="0 30 0 0 ">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClientID }"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname }"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding  Firstname}"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding  Birthday}"/>
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding  PhoneNumber}"/>
+                <DataGridTextColumn Header="Почта" Binding="{Binding  Email}"/>
+                <DataGridTextColumn Header="Потребности" Binding="{Binding  LanguageNeed}"/>
+                <DataGridTextColumn Header="Опыт" Binding="{Binding  LanguageExperience}"/>
+                <DataGridTextColumn Header="Уровень" Binding="{Binding  LanguageLevel}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

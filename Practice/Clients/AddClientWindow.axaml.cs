@@ -9,10 +9,10 @@ using MySql.Data.MySqlClient;
 
 namespace Practice;
 
-public partial class AddWindow : Window
+public partial class AddClientWindow : Window
 {
     private Database _database = new Database();
-    public AddWindow()
+    public AddClientWindow()
     {
         Width = 400;
         Height = 600;
@@ -27,7 +27,7 @@ public partial class AddWindow : Window
         {
             _database.openConnection();
             string sql =
-                "INSERT INTO Client (surname, firstname, birthday, phone_number, email, language_need, language_experience, language_level, Login, Password) " +
+                "INSERT INTO pro1_4.client (surname, firstname, birthday, phone_number, email, language_need, language_experience, language_level, Login, Password) " +
                 "VALUES (@Surname, @Name, @Birthday, @Phone, @Email, @Needs, @Experience, @Level, @Login, @Password)";
             using(MySqlCommand command = new MySqlCommand(sql, _database.getConnection()))
             {
@@ -59,7 +59,7 @@ public partial class AddWindow : Window
     {
         _database.openConnection();
         string sql =
-            "select experience_name from practice.language_experience;";
+            "select experience_name from pro1_4.language_experience;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {
@@ -74,7 +74,7 @@ public partial class AddWindow : Window
     {
         _database.openConnection();
         string sql =
-            "select level_name from practice.language_level;";
+            "select level_name from pro1_4.language_level;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {

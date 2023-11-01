@@ -20,7 +20,7 @@ public partial class AuthWindow : MainWindow
     private void RegistrationTxt_OnTapped(object? sender, TappedEventArgs e)
     {
         this.Hide();
-        AddWindow registrationWindow = new AddWindow();
+        AddClientWindow registrationWindow = new AddClientWindow();
         registrationWindow.Show();
     }
 
