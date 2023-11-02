@@ -29,7 +29,6 @@ public partial class ClientWindow : UserControl
         ShowTable(fullTable);
         
     }
-
     public void ShowTable(string sql)
     {
         _clients = new List<Client>();
@@ -55,13 +54,11 @@ public partial class ClientWindow : UserControl
         _database.closeConnection();
         ClientDataGrid.ItemsSource = _clients;
     }
-
     private void AddBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         AddClientWindow addWindow = new AddClientWindow();
         addWindow.Show();
     }
-
     public void Delete(int id)
     {
         try
@@ -78,7 +75,6 @@ public partial class ClientWindow : UserControl
             Console.WriteLine("Ошибка при удалении: " + ex.Message);
         }
     }
-
     private async void DeleteBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         try
@@ -114,7 +110,6 @@ public partial class ClientWindow : UserControl
             throw;
         }
     }
-
     private void EditBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         Client selectedClient = ClientDataGrid.SelectedItem as Client;
@@ -131,10 +126,9 @@ public partial class ClientWindow : UserControl
         }
         
     }
-
     private void SearchTxt_OnTextChanged(object? sender, TextChangedEventArgs e)
     {
-        List<Client> search = _clients.Where(x => x.Surname.ToString().Contains(SearchTxt.Text.ToString())).ToList();
+        List<Client> search = _clients.Where(x => x.Surname.ToLower().Contains(SearchTxt.Text.ToLower())).ToList();
         ClientDataGrid.ItemsSource = search;
     }
 }

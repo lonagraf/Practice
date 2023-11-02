@@ -45,6 +45,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Reports/ReportWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Schedule/ScheduleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Teachers/AddTeacherWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

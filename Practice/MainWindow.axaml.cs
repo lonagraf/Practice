@@ -5,6 +5,7 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using MySql.Data.MySqlClient;
 using Practice.Groups;
+using Practice.Schedule;
 using Practice.Teachers;
 
 namespace Practice;
@@ -85,5 +86,12 @@ public partial class MainWindow : Window
         MainPanel.Children.Clear();
         GroupWindow groupWindow = new GroupWindow();
         MainPanel.Children.Add(groupWindow);
+    }
+
+    private void ScheduleBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        ScheduleWindow scheduleWindow = new ScheduleWindow();
+        MainPanel.Children.Add(scheduleWindow);
     }
 }

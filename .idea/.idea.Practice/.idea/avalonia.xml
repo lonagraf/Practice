@@ -19,6 +19,7 @@
         <entry key="Practice/PaymentWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/RegistrationWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/ReportWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Schedule/ScheduleWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Teachers/AddTeacherWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Teachers/EditTeacherWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Teachers/TeacherWindow.axaml" value="Practice/Practice.csproj" />
