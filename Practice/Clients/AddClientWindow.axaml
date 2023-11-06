@@ -16,8 +16,6 @@
         <TextBox Name="PhoneTxt" Width="150"></TextBox>
         <TextBlock Text="Почта" HorizontalAlignment="Center"/>
         <TextBox Name="EmailTxt" Width="150"></TextBox>
-        <TextBlock Text="Потребности" HorizontalAlignment="Center"/>
-        <TextBox Name="NeedTxt" Width="150" Height="50"></TextBox>
         <TextBlock Text="Опыт изучения" HorizontalAlignment="Center"/>
         <ComboBox Name="ExperienceCmb" Width="150"></ComboBox>
         <TextBlock Text="Уровень языка" HorizontalAlignment="Center"/>

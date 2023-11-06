@@ -20,9 +20,9 @@ public partial class ClientWindow : UserControl
     private List<Client> _clients;
 
     public string fullTable =
-        "select client_id, surname, firstname, birthday, phone_number, email, language_need, experience_name, level_name from pro1_4.client " +
-        "join pro1_4.language_experience on client.language_experience = language_experience.language_experience_id " +
-        "join pro1_4.language_level on client.language_level = language_level.language_level_id;";
+        "select client_id, surname, firstname, birthday, phone_number, email, experience_name, level_name from practice.client " +
+        "join practice.language_experience on client.language_experience = language_experience.language_experience_id " +
+        "join practice.language_level on client.language_level = language_level.language_level_id;";
     public ClientWindow()
     {
         InitializeComponent();
@@ -45,7 +45,6 @@ public partial class ClientWindow : UserControl
                 Birthday = reader.GetDateTime("birthday"),
                 PhoneNumber = reader.GetString("phone_number"),
                 Email = reader.GetString("email"),
-                LanguageNeed = reader.GetString("language_need"),
                 LanguageExperience = reader.GetString("experience_name"),
                 LanguageLevel = reader.GetString("level_name")
             };
@@ -64,7 +63,7 @@ public partial class ClientWindow : UserControl
         try
         {
             _database.openConnection();
-            string sql = "delete from pro1_4.client where client_id = @clientId;";
+            string sql = "delete from practice.client where client_id = @clientId;";
             MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
             command.Parameters.AddWithValue("@clientId", id);
             command.ExecuteNonQuery();

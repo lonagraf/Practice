@@ -24,17 +24,25 @@
 
     <ItemGroup>
       <None Remove="Icons\user.png" />
-      <Resource Include="Icons\user.png" />
+      <AvaloniaResource Include="Icons\user.png" />
       <None Remove="Icons\e-learning.png" />
-      <Resource Include="Icons\e-learning.png" />
+      <AvaloniaResource Include="Icons\e-learning.png" />
       <None Remove="Icons\receipt.png" />
-      <Resource Include="Icons\receipt.png" />
+      <AvaloniaResource Include="Icons\receipt.png" />
       <None Remove="Icons\square-plus.png" />
-      <Resource Include="Icons\square-plus.png" />
+      <AvaloniaResource Include="Icons\square-plus.png" />
       <None Remove="Icons\square-minus.png" />
-      <Resource Include="Icons\square-minus.png" />
+      <AvaloniaResource Include="Icons\square-minus.png" />
       <None Remove="Icons\pen-square.png" />
-      <Resource Include="Icons\pen-square.png" />
+      <AvaloniaResource Include="Icons\pen-square.png" />
+      <None Remove="Icons\calendar.png" />
+      <AvaloniaResource Include="Icons\calendar.png" />
+      <None Remove="Icons\chalkboard-user.png" />
+      <AvaloniaResource Include="Icons\chalkboard-user.png" />
+      <None Remove="Icons\document.png" />
+      <AvaloniaResource Include="Icons\document.png" />
+      <None Remove="Icons\users-alt.png" />
+      <AvaloniaResource Include="Icons\users-alt.png" />
     </ItemGroup>
 
 

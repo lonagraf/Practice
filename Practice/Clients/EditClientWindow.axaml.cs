@@ -31,7 +31,7 @@ public partial class EditClientWindow : Window
         int id = _client.ClientID;
         _database.openConnection();
         string sql =
-            "update pro1_4.client set surname = @surname, firstname = @firstname, phone_number = @phonenumber, email = @email where client_id = @id;";
+            "update practice.client set surname = @surname, firstname = @firstname, phone_number = @phonenumber, email = @email where client_id = @id;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@surname", EditSurnameTxt.Text);
         command.Parameters.AddWithValue("@firstname", EditFirstnameTxt.Text);

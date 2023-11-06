@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using MySql.Data.MySqlClient;
 
@@ -13,8 +14,8 @@ public partial class GroupWindow : UserControl
 
     private string _fullTable =
         "select group_id, group_name, concat(surname,' ',firstname) as 'teacher', max_student_amount, course_name from `group` " +
-        "join pro1_4.course c on `group`.course = c.course_id " +
-        "join pro1_4.teacher t on t.teacher_id = `group`.teacher;";
+        "join practice.course c on `group`.course = c.course_id " +
+        "join practice.teacher t on t.teacher_id = `group`.teacher;";
     public GroupWindow()
     {
         InitializeComponent();
@@ -41,5 +42,26 @@ public partial class GroupWindow : UserControl
         }
         _database.closeConnection();
         GroupDataGrid.ItemsSource = _groups;
+    }
+
+    private void ScheduleBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        ScheduleWindow scheduleWindow = new ScheduleWindow();
+        MainPanel.Children.Add(scheduleWindow);
+    }
+
+    private void ClientBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        ClientGroupWindow clientGroupWindow = new ClientGroupWindow();
+        MainPanel.Children.Add(clientGroupWindow);
+    }
+
+    private void AppointmentBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        AttendanceWindow attendanceWindow = new AttendanceWindow();
+        MainPanel.Children.Add(attendanceWindow);
     }
 }

@@ -11,7 +11,6 @@ public class Client
     public DateTime Birthday { get; set; }
     public string PhoneNumber { get; set; }
     public string Email { get; set; }
-    public string LanguageNeed { get; set; }
     public string LanguageExperience { get; set; }
     public string LanguageLevel { get; set; }
 }

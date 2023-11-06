@@ -1,0 +1,17 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Practice.Groups.ClientGroupWindow">
+    <Grid>
+        <DataGrid Name="ClientGroupDataGrid" x:CompileBindings="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClientGroupID}" />
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Client}" />
+                <DataGridTextColumn Header="Группа" Binding="{Binding Group}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="AddClientGroup" Content="+" Click="AddClientGroup_OnClick" ></Button>
+    </Grid>
+</UserControl>

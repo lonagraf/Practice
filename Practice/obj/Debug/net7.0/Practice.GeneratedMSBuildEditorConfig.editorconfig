@@ -13,46 +13,55 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Practice
-build_property.ProjectDir = /home/KHPK.RU/student/Рабочий стол/Practice1/Practice/
+build_property.ProjectDir = C:\Users\lonah\RiderProjects\Practice-main\Practice\
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/App.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/AuthWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/AuthWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Clients/AddClientWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Clients/AddClientWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Clients/ClientWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Clients/ClientWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Clients/EditClientWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Clients/EditClientWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Courses/CourseWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Courses/CourseWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Groups/GroupWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/AddClientGroup.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/MainWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/AttendanceWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Payments/PaymentWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/ClientGroupWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Reports/ReportWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/GroupWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Schedule/ScheduleWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/ScheduleWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Teachers/AddTeacherWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Teachers/EditTeacherWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Payments/PaymentWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Practice1/Practice/Teachers/TeacherWindow.axaml]
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Reports/ReportWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Teachers/AddTeacherWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Teachers/EditTeacherWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Teachers/TeacherWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

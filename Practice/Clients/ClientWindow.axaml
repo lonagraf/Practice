@@ -5,25 +5,27 @@
              mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
              x:Class="Practice.ClientWindow">
     <Grid>
-        <Button Name="AddBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" Click="AddBtn_OnClick" >
+        <Panel Name="TopPanel" Background="Lavender" VerticalAlignment="Top" Height="30">
+        <Button Name="AddBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Lavender" Click="AddBtn_OnClick" >
             <StackPanel Orientation="Vertical">
-                <!--<Image Source="/Icons/square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
-                <TextBlock>+</TextBlock>
+                <Image Source="/Icons/square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                <!--<TextBlock>+</TextBlock>-->
             </StackPanel>
         </Button>
-        <Button Name="DeleteBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0" Background="White" Click="DeleteBtn_OnClick" >
+        <Button Name="DeleteBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0" Background="Lavender" Click="DeleteBtn_OnClick" >
             <StackPanel Orientation="Vertical">
-                <!--<Image Source="/Icons/square-minus.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
-                <TextBlock>-</TextBlock>
+                <Image Source="\Icons\square-minus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                <!--<TextBlock>-</TextBlock>-->
             </StackPanel>
         </Button>
-        <Button Name="EditBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60 0 0 0" Background="White" Click="EditBtn_OnClick">
+        <Button Name="EditBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60 0 0 0" Background="Lavender" Click="EditBtn_OnClick">
             <StackPanel Orientation="Vertical">
-                <!--<Image Source="/Icons/pen-square.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
-                <TextBlock>Edit</TextBlock>
+                <Image Source="\Icons\pen-square.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                <!--<TextBlock>Edit</TextBlock>-->
             </StackPanel>
         </Button>
-        <TextBox Name="SearchTxt" Width="150" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100 0 0 0" TextChanged="SearchTxt_OnTextChanged"></TextBox>
+        <TextBox Name="SearchTxt" Width="150" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100 0 0 0" TextChanged="SearchTxt_OnTextChanged"></TextBox>
+        </Panel>
         <DataGrid Name="ClientDataGrid" x:CompileBindings="False" Margin="0 30 0 0 ">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ClientID }"/>
@@ -32,7 +34,6 @@
                 <DataGridTextColumn Header="Дата рождения" Binding="{Binding  Birthday}"/>
                 <DataGridTextColumn Header="Номер телефона" Binding="{Binding  PhoneNumber}"/>
                 <DataGridTextColumn Header="Почта" Binding="{Binding  Email}"/>
-                <DataGridTextColumn Header="Потребности" Binding="{Binding  LanguageNeed}"/>
                 <DataGridTextColumn Header="Опыт" Binding="{Binding  LanguageExperience}"/>
                 <DataGridTextColumn Header="Уровень" Binding="{Binding  LanguageLevel}"/>
             </DataGrid.Columns>

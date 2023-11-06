@@ -16,44 +16,38 @@
                 <!--<Button Name="ClientBtn" Width="200" Background="Lavender" Content="Клиенты" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 50 0 0 " Click="ClientBtn_OnClick"/>-->
                 <Button Name="ClientBtn" Width="200" Background="Lavender" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 50 0 0" Click="ClientBtn_OnClick">
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Source="/Icons/user.png" Width="20" Height="20" Margin="0,0,5,0"/>-->
+                        <Image Source="Icons\user.png" Width="20" Height="20" Margin="0,0,5,0"/>
                         <TextBlock Text="Клиенты"/>
                     </StackPanel>
                 </Button>
                 <Button Name="CourseBtn" Width="200" Background="Lavender" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 10 0 0 " Click="CourseBtn_OnClick">
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Source="/Icons/e-learning.png" Width="20" Height="20" Margin="0,0,5,0"/>-->
+                        <Image Source="Icons\e-learning.png" Width="20" Height="20" Margin="0,0,5,0"/>
                         <TextBlock Text="Курсы"/>
                     </StackPanel>
                 </Button>
                 <Button Name="PaymentBtn" Width="200" Background="Lavender"  HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 10 0 0 " Click="PaymentBtn_OnClick">
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Source="/Icons/receipt.png" Width="20" Height="20" Margin="0,0,5,0"/>-->
+                        <Image Source="Icons\receipt.png" Width="20" Height="20" Margin="0,0,5,0"/>
                         <TextBlock Text="Оплаты"/>
                     </StackPanel>
                 </Button>
                 <Button Name="ReportBtn" Width="200" Background="Lavender" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 10 0 0 " Click="ReportBtn_OnClick">
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Source="/Icons/document.png" Width="20" Height="20" Margin="0,0,5,0"/>-->
+                        <Image Source="Icons\document.png" Width="20" Height="20" Margin="0,0,5,0"/>
                         <TextBlock Text="Отчеты"/>
                     </StackPanel>
                 </Button>
                 <Button Name="TeacherBtn" Width="200" Background="Lavender" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 10 0 0 " Click="TeacherBtn_OnClick" >
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Source="/Icons/document.png" Width="20" Height="20" Margin="0,0,5,0"/>-->
+                        <Image Source="Icons\chalkboard-user.png" Width="20" Height="20" Margin="0,0,5,0"/>
                         <TextBlock Text="Учителя"/>
                     </StackPanel>
                 </Button>
                 <Button Name="GroupBtn" Width="200" Background="Lavender" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 10 0 0 " Click="GroupBtn_OnClick">
                     <StackPanel Orientation="Horizontal">
-                        <!--<Image Source="/Icons/document.png" Width="20" Height="20" Margin="0,0,5,0"/>-->
+                        <Image Source="Icons\users-alt.png" Width="20" Height="20" Margin="0,0,5,0"/>
                         <TextBlock Text="Группы"/>
-                    </StackPanel>
-                </Button>
-                <Button Name="ScheduleBtn" Width="200" Background="Lavender" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" Margin="0 10 0 0 " Click="ScheduleBtn_OnClick">
-                    <StackPanel Orientation="Horizontal">
-                        <!--<Image Source="/Icons/document.png" Width="20" Height="20" Margin="0,0,5,0"/>-->
-                        <TextBlock Text="Расписание"/>
                     </StackPanel>
                 </Button>
             </StackPanel>

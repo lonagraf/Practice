@@ -5,6 +5,12 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Practice.Groups.GroupWindow">
     <Grid>
+        <Panel Name="TopPanel" Background="Lavender" VerticalAlignment="Top" Height="30">
+        <Button VerticalAlignment="Top" Name="ScheduleBtn" Content="Расписание" Height="25" Background="Lavender" Click="ScheduleBtn_OnClick"></Button>
+        <Button VerticalAlignment="Top" Name="ClientBtn" Content="Клиенты" Height="25" Margin="100 0 0 0" Background="Lavender" Click="ClientBtn_OnClick"></Button>
+        <Button VerticalAlignment="Top" Name="AppointmentBtn" Content="Посещение" Height="25" Margin="177 0 0 0" Background="Lavender" Click="AppointmentBtn_OnClick"></Button>
+        </Panel>
+        <Panel Name="MainPanel" Margin="0 25 0 0">
         <DataGrid Name="GroupDataGrid" x:CompileBindings="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding GroupID}" />
@@ -14,5 +20,6 @@
                 <DataGridTextColumn Header="Курс" Binding="{Binding Course}"/>
             </DataGrid.Columns>
         </DataGrid>
+        </Panel>
     </Grid>
 </UserControl>

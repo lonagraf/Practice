@@ -29,7 +29,7 @@ public partial class EditTeacherWindow : Window
     {
         int id = _teacher.TeacherID;
         _database.openConnection();
-        string sql = "update pro1_4.teacher set surname = @Surname, firstname = @Firstname, phone_number = @Phone, email = @Email where teacher_id = @id;";
+        string sql = "update practice.teacher set surname = @Surname, firstname = @Firstname, phone_number = @Phone, email = @Email where teacher_id = @id;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@Surname", EditSurnameTxt.Text);
         command.Parameters.AddWithValue("@Firstname", EditFirstnameTxt.Text);

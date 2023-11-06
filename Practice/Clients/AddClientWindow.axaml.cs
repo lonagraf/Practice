@@ -27,8 +27,8 @@ public partial class AddClientWindow : Window
         {
             _database.openConnection();
             string sql =
-                "INSERT INTO pro1_4.client (surname, firstname, birthday, phone_number, email, language_need, language_experience, language_level, Login, Password) " +
-                "VALUES (@Surname, @Name, @Birthday, @Phone, @Email, @Needs, @Experience, @Level, @Login, @Password)";
+                "INSERT INTO practice.client (surname, firstname, birthday, phone_number, email, language_experience, language_level, Login, Password) " +
+                "VALUES (@Surname, @Name, @Birthday, @Phone, @Email, @Experience, @Level, @Login, @Password)";
             using(MySqlCommand command = new MySqlCommand(sql, _database.getConnection()))
             {
                 command.Parameters.AddWithValue("@Surname", SurnameTxt.Text);
@@ -36,7 +36,6 @@ public partial class AddClientWindow : Window
                 command.Parameters.AddWithValue("@Birthday", BirthdayPicker.SelectedDate.GetValueOrDefault());
                 command.Parameters.AddWithValue("@Phone", PhoneTxt.Text);
                 command.Parameters.AddWithValue("@Email", EmailTxt.Text);
-                command.Parameters.AddWithValue("@Needs", NeedTxt.Text);
                 int selectedExperienceId = GetSelectedExperienceId(ExperienceCmb.SelectedItem.ToString());
                 int selectedLevelId = GetSelectedLevelId(LevelCmb.SelectedItem.ToString());
                 command.Parameters.AddWithValue("@Experience", selectedExperienceId);
@@ -59,7 +58,7 @@ public partial class AddClientWindow : Window
     {
         _database.openConnection();
         string sql =
-            "select experience_name from pro1_4.language_experience;";
+            "select experience_name from practice.language_experience;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {
@@ -74,7 +73,7 @@ public partial class AddClientWindow : Window
     {
         _database.openConnection();
         string sql =
-            "select level_name from pro1_4.language_level;";
+            "select level_name from practice.language_level;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {

@@ -12,9 +12,8 @@ public partial class CourseWindow : UserControl
     private List<Course> _courses;
 
     private string _fullTable =
-        "select course_id, course_name, course_description, date_start, date_end, concat(surname,' ', firstname) as 'client', price, language_name from course " +
-        "join pro1_4.client c on c.client_id = course.client " +
-        "join pro1_4.language_study ls on ls.language_study_id = course.language_study;";
+        "select course_id, course_name, course_description, language_name from course " +
+        "join practice.language_study ls on ls.language_study_id = course.language_study;";
     public CourseWindow()
     {
         InitializeComponent();
@@ -34,10 +33,6 @@ public partial class CourseWindow : UserControl
                 CourseID = reader.GetInt32("course_id"),
                 CourseName = reader.GetString("course_name"),
                 CourseDesc = reader.GetString("course_description"),
-                DateStart = reader.GetDateTime("date_start"),
-                DateEnd = reader.GetDateTime("date_end"),
-                Client = reader.GetString("client"),
-                Price = reader.GetDouble("price"),
                 LanguageStudy = reader.GetString("language_name")
             };
             _courses.Add(currentCourse);

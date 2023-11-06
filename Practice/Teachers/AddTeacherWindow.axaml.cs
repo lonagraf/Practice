@@ -23,7 +23,7 @@ public partial class AddTeacherWindow : Window
     {
         _database.openConnection();
         string sql =
-            "insert into pro1_4.teacher (surname, firstname, birthday, phone_number, email) values (@Surname, @Firstname, @Birthday, @Phone, @Email);";
+            "insert into practice.teacher (surname, firstname, birthday, phone_number, email) values (@Surname, @Firstname, @Birthday, @Phone, @Email);";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@Surname", SurnameTxt.Text);
         command.Parameters.AddWithValue("@Firstname", NameTxt.Text);

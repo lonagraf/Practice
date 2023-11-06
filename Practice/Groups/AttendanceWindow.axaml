@@ -3,14 +3,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Practice.CourseWindow">
+             x:Class="Practice.Groups.AttendanceWindow">
     <Grid>
-        <DataGrid Name="CourseDataGrid" x:CompileBindings="False">
+        <DataGrid Name="AttendanceDataGrid" x:CompileBindings="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding CourseID}"/>
-                <DataGridTextColumn Header="Курс" Binding="{Binding CourseName}"/>
-                <DataGridTextColumn Header="Описание" Binding="{Binding CourseDesc}"/> 
-                <DataGridTextColumn Header="Язык" Binding="{Binding LanguageStudy}"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding AttendanceID}" />
+                <DataGridTextColumn Header="Начало" Binding="{Binding Start}" />
+                <DataGridTextColumn Header="Конец" Binding="{Binding End}" />
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Client}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

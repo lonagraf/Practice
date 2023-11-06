@@ -51,7 +51,7 @@ public partial class TeacherWindow : UserControl
     public void Delete(int id)
     {
         _database.openConnection();
-        string sql = "delete from pro1_4.teacher where teacher_id = @teacherId;";
+        string sql = "delete from practice.teacher where teacher_id = @teacherId;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@teacherId", id);
         command.ExecuteNonQuery();

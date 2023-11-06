@@ -5,24 +5,26 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Practice.Teachers.TeacherWindow">
     <Grid>
-        <Button Name="AddBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" Click="AddBtn_OnClick" >
+        <Panel Name="TopPanel" Background="Lavender" VerticalAlignment="Top" Height="30">
+        <Button Name="AddBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Lavender" Click="AddBtn_OnClick" >
             <StackPanel Orientation="Vertical">
-                <!--<Image Source="/Icons/square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
-                <TextBlock>+</TextBlock>
+                <Image Source="\Icons\square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                <!--<TextBlock>+</TextBlock>-->
             </StackPanel>
         </Button>
-        <Button Name="DeleteBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0" Background="White" Click="DeleteBtn_OnClick" >
+        <Button Name="DeleteBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 0 0 0" Background="Lavender" Click="DeleteBtn_OnClick" >
             <StackPanel Orientation="Vertical">
-                <!--<Image Source="/Icons/square-minus.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
-                <TextBlock>-</TextBlock>
+                <Image Source="\Icons\square-minus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                <!--<TextBlock>-</TextBlock>-->
             </StackPanel>
         </Button>
-        <Button Name="EditBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60 0 0 0" Background="White" Click="EditBtn_OnClick">
+        <Button Name="EditBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60 0 0 0" Background="Lavender" Click="EditBtn_OnClick">
             <StackPanel Orientation="Vertical">
-                <!--<Image Source="/Icons/pen-square.png" Width="20" Height="20" HorizontalAlignment="Center"/>-->
-                <TextBlock>Edit</TextBlock>
+                <Image Source="\Icons\pen-square.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                <!--<TextBlock>Edit</TextBlock>-->
             </StackPanel>
         </Button>
+        </Panel>
         <DataGrid Name="TeacherDataGrid" x:CompileBindings="False" Margin="0 30 0 0 ">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding TeacherID }"/>
