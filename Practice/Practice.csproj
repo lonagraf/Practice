@@ -71,5 +71,21 @@
         <DependentUpon>PaymentWindow.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Attendance\AttendanceWindow.axaml.cs">
+        <DependentUpon>AttendanceWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Schedule\ScheduleWindow.axaml.cs">
+        <DependentUpon>ScheduleWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ClientsInGroups\AddClientGroup.axaml.cs">
+        <DependentUpon>AddClientGroup.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ClientsInGroups\ClientGroupWindow.axaml.cs">
+        <DependentUpon>ClientGroupWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

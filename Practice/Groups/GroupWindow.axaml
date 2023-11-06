@@ -11,7 +11,7 @@
         <Button VerticalAlignment="Top" Name="AppointmentBtn" Content="Посещение" Height="25" Margin="177 0 0 0" Background="Lavender" Click="AppointmentBtn_OnClick"></Button>
         </Panel>
         <Panel Name="MainPanel" Margin="0 25 0 0">
-        <DataGrid Name="GroupDataGrid" x:CompileBindings="False">
+            <DataGrid Name="GroupDataGrid" x:CompileBindings="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding GroupID}" />
                 <DataGridTextColumn Header="Группа" Binding="{Binding GroupName}"/>
@@ -19,7 +19,24 @@
                 <DataGridTextColumn Header="Кол-во" Binding="{Binding MaxStudentAmount}"/>
                 <DataGridTextColumn Header="Курс" Binding="{Binding Course}"/>
             </DataGrid.Columns>
-        </DataGrid>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Name="AddBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Background="White" >
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Icons/square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button Name="DeleteBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left"  Background="White" >
+                <StackPanel Orientation="Vertical">
+                    <Image Source="\Icons\square-minus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button Name="EditBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left"  Background="White">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="\Icons\pen-square.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            </StackPanel>
         </Panel>
     </Grid>
 </UserControl>

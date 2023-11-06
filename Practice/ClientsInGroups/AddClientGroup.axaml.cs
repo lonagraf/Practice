@@ -14,6 +14,8 @@ public partial class AddClientGroup : Window
     private Database _database = new Database();
     public AddClientGroup()
     {
+        Width = 400;
+        Height = 200;
         InitializeComponent();
         LoadDataClientCmb();
         LoadDataGroupCmb();

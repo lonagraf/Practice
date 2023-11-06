@@ -12,6 +12,10 @@
                 <DataGridTextColumn Header="Группа" Binding="{Binding Group}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="AddClientGroup" Content="+" Click="AddClientGroup_OnClick" ></Button>
+        <Button Name="AddClientGroupBtn" Width="30" Height="30" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Background="White" Click="AddClientGroup_OnClick" >
+            <StackPanel Orientation="Vertical">
+                <Image Source="/Icons/square-plus.png" Width="20" Height="20" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </UserControl>

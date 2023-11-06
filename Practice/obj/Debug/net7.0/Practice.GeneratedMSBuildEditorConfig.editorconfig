@@ -18,7 +18,16 @@ build_property.ProjectDir = C:\Users\lonah\RiderProjects\Practice-main\Practice\
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Attendance/AttendanceWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/AuthWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/ClientsInGroups/AddClientGroup.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/ClientsInGroups/ClientGroupWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/Clients/AddClientWindow.axaml]
@@ -33,19 +42,7 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/Courses/CourseWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/AddClientGroup.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/AttendanceWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/ClientGroupWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/GroupWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/lonah/RiderProjects/Practice-main/Practice/Groups/ScheduleWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/MainWindow.axaml]
@@ -55,6 +52,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/Reports/ReportWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/lonah/RiderProjects/Practice-main/Practice/Schedule/ScheduleWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/lonah/RiderProjects/Practice-main/Practice/Teachers/AddTeacherWindow.axaml]
