@@ -3,6 +3,8 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
 using MySql.Data.MySqlClient;
 
 namespace Practice.Groups;
@@ -46,4 +48,41 @@ public partial class ClientGroupWindow : UserControl
         AddClientGroup addClientGroup = new AddClientGroup();
         addClientGroup.Show();
     }
+
+    public void Delete(int id)
+    {
+        _database.openConnection();
+        string sql = "delete from practice.clients_in_groups where clients_in_groups_id = @clientGroupId;";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        command.Parameters.AddWithValue("@clientGroupId", id);
+        command.ExecuteNonQuery();
+        _database.closeConnection();
+    }
+    private async void DeleteBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        ClientGroup selectedClientGroup = ClientGroupDataGrid.SelectedItem as ClientGroup;
+        if (selectedClientGroup != null)
+        {
+            var warning = MessageBoxManager.GetMessageBoxStandard("Предупреждение", "Вы уверены что хотите удалить?", ButtonEnum.YesNo);
+            var result = await warning.ShowAsync();
+            if (result == ButtonResult.Yes)
+            {
+                Delete(selectedClientGroup.ClientGroupID);
+                ShowTable(fullTable);
+                var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Успешно удален!", ButtonEnum.Ok);
+                var successResult = box.ShowAsync();
+            }
+            else
+            {
+                var cancelBox = MessageBoxManager.GetMessageBoxStandard("Отмена", "Операция удаления отменена", ButtonEnum.Ok);
+                var cancelResult = cancelBox.ShowAsync();
+            }
+        }
+        else
+        {
+            var box = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Выберите поле для удаления!", ButtonEnum.Ok);
+            var result = box.ShowAsync();
+        }
+    }
+    
 }

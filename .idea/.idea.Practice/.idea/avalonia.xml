@@ -13,13 +13,16 @@
         <entry key="Practice/Clients/EditClientWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/ClientsInGroups/AddClientGroup.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/ClientsInGroups/ClientGroupWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/ClientsInGroups/EditClientGroup.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/CourseWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Courses/CourseWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/EditClientWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/AddClientGroup.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Groups/AddGroupWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/AttendanceWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/ClientGroup.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/ClientGroupWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Groups/EditGroupWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/GroupWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/ScheduleWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/MainWindow.axaml" value="Practice/Practice.csproj" />

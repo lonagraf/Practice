@@ -3,6 +3,8 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
 using MySql.Data.MySqlClient;
 
 namespace Practice.Groups;
@@ -63,5 +65,55 @@ public partial class GroupWindow : UserControl
         MainPanel.Children.Clear();
         AttendanceWindow attendanceWindow = new AttendanceWindow();
         MainPanel.Children.Add(attendanceWindow);
+    }
+
+    private void AddBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        AddGroupWindow addGroupWindow = new AddGroupWindow();
+        addGroupWindow.Show();
+    }
+
+    public void Delete(int id)
+    {
+        _database.openConnection();
+        string sql = "delete from practice.`group` where group_id = @groupId;";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        command.Parameters.AddWithValue("@groupId", id);
+        command.ExecuteNonQuery();
+        _database.closeConnection();
+    }
+
+    private async void DeleteBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Group selectedGroup = GroupDataGrid.SelectedItem as Group;
+
+        if (selectedGroup != null)
+        {
+            var warning = MessageBoxManager.GetMessageBoxStandard("Предупреждение", "Вы уверены что хотите удалить группу?", ButtonEnum.YesNo);
+            var result = await warning.ShowAsync();
+            if (result == ButtonResult.Yes)
+            {
+                Delete(selectedGroup.GroupID);
+                ShowTable(_fullTable);
+                var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Группа успешно удалена!", ButtonEnum.Ok);
+                var successResult = box.ShowAsync();
+            }
+            else
+            {
+                var cancelBox = MessageBoxManager.GetMessageBoxStandard("Отмена", "Операция удаления отменена", ButtonEnum.Ok);
+                var cancelResult = cancelBox.ShowAsync();
+            }
+        }
+        else
+        {
+            var box = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Выберите группу для удаления!", ButtonEnum.Ok);
+            var result = box.ShowAsync();
+        }
+    }
+
+    private void EditBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        EditGroupWindow editGroupWindow = new EditGroupWindow();
+        editGroupWindow.Show();
     }
 }

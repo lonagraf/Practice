@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
         x:Class="Practice.Groups.AddClientGroup"
-        Title="AddClientGroup">
+        Title="Добавление клиентов в группу">
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock Text="Клиент" HorizontalAlignment="Center"/>
         <ComboBox Name="ClientCmb" Width="150"></ComboBox>

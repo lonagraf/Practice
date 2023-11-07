@@ -1,0 +1,19 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Practice.Groups.EditGroupWindow"
+        Title="EditGroupWindow">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Название группы" HorizontalAlignment="Center"/>
+        <TextBox Name="GroupNameTxt" Width="150"/>
+        <TextBlock Text="Учитель" HorizontalAlignment="Center"/>
+        <ComboBox Name="TeacherCmb" Width="150"/>
+        <TextBlock Text="Количество учеников" HorizontalAlignment="Center"/>
+        <TextBox Name="AmountTxt" Width="150"/>
+        <TextBlock Text="Курс" HorizontalAlignment="Center"/>
+        <ComboBox Name="CourseCmb" Width="150"/>
+        <Button Name="AddBtn" Width="150" Content="Добавить" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 10 0 0" Background="Lavender"/>
+    </StackPanel>
+</Window>

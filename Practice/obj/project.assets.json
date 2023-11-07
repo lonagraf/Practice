@@ -5530,11 +5530,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lonah\\RiderProjects\\Practice-main\\Practice\\Practice.csproj",
+      "projectUniqueName": "C:\\Users\\lonah\\RiderProjects\\pizdaedanaya\\Practice\\Practice.csproj",
       "projectName": "Practice",
-      "projectPath": "C:\\Users\\lonah\\RiderProjects\\Practice-main\\Practice\\Practice.csproj",
+      "projectPath": "C:\\Users\\lonah\\RiderProjects\\pizdaedanaya\\Practice\\Practice.csproj",
       "packagesPath": "C:\\Users\\lonah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lonah\\RiderProjects\\Practice-main\\Practice\\obj\\",
+      "outputPath": "C:\\Users\\lonah\\RiderProjects\\pizdaedanaya\\Practice\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lonah\\AppData\\Roaming\\NuGet\\NuGet.Config"
