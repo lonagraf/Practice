@@ -8,4 +8,5 @@ public class Course
     public string CourseName { get; set; }
     public string CourseDesc { get; set; }
     public string LanguageStudy { get; set; }
+    public double Price { get; set; }
 }

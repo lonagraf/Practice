@@ -2,7 +2,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
              x:Class="Practice.PaymentWindow">
-    Оплаты
+    <Grid>
+        <ListBox Name="CourseListBox"  Width="250" HorizontalAlignment="Left" DoubleTapped="CourseListBox_OnDoubleTapped" ></ListBox>
+        <ListBox Name="CartListBox"  Width="250" Height="300" VerticalAlignment="Top" HorizontalAlignment="Right" FontWeight="Bold" DoubleTapped="CartListBox_OnDoubleTapped"></ListBox>
+        <TextBlock Name="SumTextBlock" Text="Итого: " VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 100 130"/>
+        <Button Name="PayBtn" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Оплатить" Width="245" Height="50" Background="Lavender" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0 0 5 70"/>
+        <Button Name="ReceiptBtn" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Чек" Width="245" Height="50" Background="Lavender" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0 0 5 5"/>
+    </Grid>
 </UserControl>
