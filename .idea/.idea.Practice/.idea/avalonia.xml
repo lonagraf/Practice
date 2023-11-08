@@ -28,6 +28,7 @@
         <entry key="Practice/MainWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/PaymentWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Payments/PaymentWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Payments/ReceiptWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/RegistrationWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/ReportWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Reports/ReportWindow.axaml" value="Practice/Practice.csproj" />

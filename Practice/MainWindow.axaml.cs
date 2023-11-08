@@ -12,6 +12,7 @@ namespace Practice;
 public partial class MainWindow : Window
 {
     private Database _database = new Database();
+    public int AuthorizedClientId { get; set; }
     public MainWindow()
     {
         InitializeComponent();
@@ -36,7 +37,7 @@ public partial class MainWindow : Window
     private void PaymentBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         MainPanel.Children.Clear();
-        PaymentWindow paymentWindow= new PaymentWindow();
+        PaymentWindow paymentWindow= new PaymentWindow(AuthorizedClientId);
         MainPanel.Children.Add(paymentWindow);
     }
 

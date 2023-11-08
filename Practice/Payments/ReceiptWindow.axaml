@@ -1,0 +1,19 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Practice.Payments.ReceiptWindow"
+        Title="ReceiptWindow">
+    <Grid>
+        <DataGrid Name="ReceiptDataGrid" x:CompileBindings="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding PaymentID}"/>
+                <DataGridTextColumn Header="Курс" Binding="{Binding CourseName}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Client}"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding PaymentSum}"/>
+                <DataGridTextColumn Header="Метод" Binding="{Binding Method}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

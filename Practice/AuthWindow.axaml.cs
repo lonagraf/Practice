@@ -1,3 +1,4 @@
+using System;
 using System.Data;
 using Avalonia.Controls;
 using Avalonia.Input;
@@ -10,6 +11,7 @@ namespace Practice;
 
 public partial class AuthWindow : MainWindow
 {
+    private Database _database = new Database();
     public AuthWindow()
     {
         InitializeComponent();
@@ -39,12 +41,14 @@ public partial class AuthWindow : MainWindow
         adapter.Fill(table);
         if (table.Rows.Count > 0)
         {
+            int authorizedClientId = GetClientIdFromDatabase(loginUser);
             var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Вы успешно вошли", ButtonEnum.Ok);
             var result = box.ShowAsync();
             this.Hide();
             string username = GetUserNameFromDatabase(loginUser); 
             MainWindow mainWindow = new MainWindow(); 
             mainWindow.DisplayWelcomeMessage(username); 
+            mainWindow.AuthorizedClientId = authorizedClientId;
             mainWindow.Show();
         }
         else
@@ -53,5 +57,19 @@ public partial class AuthWindow : MainWindow
             var result = box.ShowAsync();
         }
     }
-    
+    private int GetClientIdFromDatabase(string username)
+    {
+        int userId = -1;
+        _database.openConnection();
+        string sql = "select client_id from client where login = @username;";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        command.Parameters.Add("@username", MySqlDbType.VarChar).Value = username;
+        object result = command.ExecuteScalar();
+        if (result != null)
+        {
+            userId = Convert.ToInt32(result);
+        }
+        _database.closeConnection();
+        return userId;
+    }
 }

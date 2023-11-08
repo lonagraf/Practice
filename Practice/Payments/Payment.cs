@@ -7,4 +7,5 @@ public class Payment
     public double CoursePrice { get; set; }
     public string Client { get; set; }
     public double PaymentSum { get; set; }
+    public string Method { get; set; }
 }
