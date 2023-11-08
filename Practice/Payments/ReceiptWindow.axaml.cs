@@ -19,6 +19,7 @@ public partial class ReceiptWindow : Window
         "join practice.payment_method pm on pm.payment_method_id = payment.payment_method;";
     public ReceiptWindow()
     {
+        Width = 600;
         InitializeComponent();
         ShowTable(_fullTable);
     }

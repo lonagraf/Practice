@@ -86,6 +86,7 @@ public partial class AddClientWindow : Window
     }
     private int GetSelectedExperienceId(string selectedExperience)
     {
+        _database.openConnection();
         string sql = "SELECT language_experience_id FROM language_experience WHERE experience_name = @selectedExperience";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@selectedExperience", selectedExperience);
@@ -95,6 +96,7 @@ public partial class AddClientWindow : Window
     
     private int GetSelectedLevelId(string selectedLevel)
     {
+        _database.openConnection();
         string sql = "SELECT language_level_id FROM language_level WHERE level_name = @selectedLevel";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@selectedLevel", selectedLevel);

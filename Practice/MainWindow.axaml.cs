@@ -18,6 +18,7 @@ public partial class MainWindow : Window
         InitializeComponent();
         Width = 1200;
         Height = 450;
+        Icon = new WindowIcon("WinIcon/apps.png");
     }
     
     private void ClientBtn_OnClick(object? sender, RoutedEventArgs e)
@@ -47,21 +48,7 @@ public partial class MainWindow : Window
         ReportWindow reportWindow = new ReportWindow();
         MainPanel.Children.Add(reportWindow);
     }
-    public string GetUserNameFromDatabase(string login)
-    {
-        string username = ""; 
-        _database.openConnection(); 
-        string sql = "SELECT firstname FROM practice.client WHERE login = @login;";
-        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
-        command.Parameters.AddWithValue("@login", login);
-        var result = command.ExecuteScalar();
-        if (result != null) 
-        {
-            username = result.ToString();
-        }
-        _database.closeConnection();
-        return username;
-    }
+    
     public void DisplayWelcomeMessage(string username)
     {
         if (!string.IsNullOrEmpty(username))
@@ -73,6 +60,7 @@ public partial class MainWindow : Window
             WelcomeTxt.Text = "Добро пожаловать!";
         }
     }
+    
 
     private void TeacherBtn_OnClick(object? sender, RoutedEventArgs e)
     {
@@ -86,5 +74,10 @@ public partial class MainWindow : Window
         MainPanel.Children.Clear();
         GroupWindow groupWindow = new GroupWindow();
         MainPanel.Children.Add(groupWindow);
+    }
+
+    private void LogOutBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        this.Close();
     }
 }

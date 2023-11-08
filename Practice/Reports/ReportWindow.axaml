@@ -4,5 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Practice.ReportWindow">
-    Отчеты
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Button Name="CourseReportBtn" Width="200" Height="50" Content="Отчет курсы" Background="Lavender" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Click="CourseReportBtn_OnClick"/>
+        <Button Name="AttendanceReportBtn" Width="200" Height="50" Content="Отчет посещаемости" Background="Lavender" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16" Margin="0 10 0 0" Click="AttendanceReportBtn_OnClick"/>
+        <Button Name="ClientGroupReportBtn" Width="200" Height="50"  Background="Lavender" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16" Margin="0 10 0 0" Click="ClientGroupReportBtn_OnClick">
+            <TextBlock Text="Отчет о клиентах в группах" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+    </StackPanel>
 </UserControl>

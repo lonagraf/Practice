@@ -5,7 +5,14 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Practice.PaymentWindow">
     <Grid>
-        <ListBox Name="CourseListBox"  Width="250" HorizontalAlignment="Left" DoubleTapped="CourseListBox_OnDoubleTapped" ></ListBox>
+        <!--<ListBox Name="CourseListBox"  Width="250" HorizontalAlignment="Left" DoubleTapped="CourseListBox_OnDoubleTapped" ></ListBox>-->
+        <ListBox Name="CourseListBox" Width="320" HorizontalAlignment="Left" DoubleTapped="CourseListBox_OnDoubleTapped" x:CompileBindings="False">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" FontWeight="Bold" FontSize="18" /> 
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <ListBox Name="CartListBox"  Width="250" Height="300" VerticalAlignment="Top" HorizontalAlignment="Right" FontWeight="Bold" DoubleTapped="CartListBox_OnDoubleTapped"></ListBox>
         <TextBlock Name="SumTextBlock" Text="Итого: " VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 100 130"/>
         <ComboBox Name="PaymentMethodCmb" Width="245" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 5 100"/>

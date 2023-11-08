@@ -1,0 +1,17 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="490" d:DesignHeight="200"
+        x:Class="Practice.Reports.CourseReportWindow"
+        Title="CourseReportWindow">
+    <Grid>
+        <DataGrid Name="CourseReportDataGrid" x:CompileBindings="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название курса" Binding="{Binding CourseName}"/>
+                <DataGridTextColumn Header="Кол-во оплативших клиентов" Binding="{Binding TotalClients}"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding TotalSum}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

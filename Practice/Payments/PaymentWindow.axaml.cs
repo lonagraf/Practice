@@ -50,7 +50,6 @@ public partial class PaymentWindow : UserControl
             string selectedCourse = CourseListBox.SelectedItem.ToString();
             CartListBox.Items.Add(selectedCourse);
         }
-
         UpdateTotalAmount();
     }
 
@@ -61,7 +60,6 @@ public partial class PaymentWindow : UserControl
             string selectedItem = CartListBox.SelectedItem.ToString();
             CartListBox.Items.Remove(selectedItem);
         }
-
         UpdateTotalAmount();
     }
 

@@ -6,6 +6,7 @@
         <entry key="Practice/AddWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/AdminWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/App.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Attendance/AttendanceWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/AuthWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/ClientWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Clients/AddClientWindow.axaml" value="Practice/Practice.csproj" />
@@ -15,7 +16,9 @@
         <entry key="Practice/ClientsInGroups/ClientGroupWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/ClientsInGroups/EditClientGroup.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/CourseWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Courses/AddCourseWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Courses/CourseWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Courses/EditCourseWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/EditClientWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/AddClientGroup.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Groups/AddGroupWindow.axaml" value="Practice/Practice.csproj" />
@@ -31,6 +34,9 @@
         <entry key="Practice/Payments/ReceiptWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/RegistrationWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/ReportWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Reports/AttendanceReportWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Reports/ClientGroupReportWindow.axaml" value="Practice/Practice.csproj" />
+        <entry key="Practice/Reports/CourseReportWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Reports/ReportWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Schedule/ScheduleWindow.axaml" value="Practice/Practice.csproj" />
         <entry key="Practice/Teachers/AddTeacherWindow.axaml" value="Practice/Practice.csproj" />

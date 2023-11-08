@@ -43,6 +43,8 @@
       <AvaloniaResource Include="Icons\document.png" />
       <None Remove="Icons\users-alt.png" />
       <AvaloniaResource Include="Icons\users-alt.png" />
+      <None Remove="Icons\sign-out-alt.png" />
+      <AvaloniaResource Include="Icons\sign-out-alt.png" />
     </ItemGroup>
 
 

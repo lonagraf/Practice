@@ -1,0 +1,19 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="300"
+        x:Class="Practice.Courses.AddCourseWindow"
+        Title="Добавление курса">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Название курса" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="NameTxt" Width="150"/>
+        <TextBlock Text="Описание курса" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="DescTxt" Width="150"/>
+        <TextBlock Text="Цена" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="PriceTxt" Width="150"/>
+        <TextBlock Text="Язык изучения" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <ComboBox Name="LanguageCmb" Width="150"/>
+        <Button Name="AddBtn" Width="150" Content="Добавить" Background="Lavender" HorizontalContentAlignment="Center" Margin="0 10 0 0" FontWeight="Bold" Click="AddBtn_OnClick"/>
+    </StackPanel>
+</Window>

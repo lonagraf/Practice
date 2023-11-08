@@ -1,0 +1,17 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="455" d:DesignHeight="300"
+        x:Class="Practice.Reports.AttendanceReportWindow"
+        Title="AttendanceReportWindow">
+    <Grid>
+        <DataGrid Name="AttendanceReportDataGrid" x:CompileBindings="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding  Client}"/>
+                <DataGridTextColumn Header="Кол-во посещений" Binding="{Binding  TotalWas}"/>
+                <DataGridTextColumn Header="Кол-во отсутствия" Binding="{Binding  TotalWasnt}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -17,11 +17,11 @@ public partial class AuthWindow : MainWindow
         InitializeComponent();
         Width = 400;
         Height = 400;
+        Icon = new WindowIcon("WinIcon/clown.png");
     }
 
     private void RegistrationTxt_OnTapped(object? sender, TappedEventArgs e)
     {
-        this.Hide();
         AddClientWindow registrationWindow = new AddClientWindow();
         registrationWindow.Show();
     }
@@ -56,6 +56,21 @@ public partial class AuthWindow : MainWindow
             var box = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Ошибка входа", ButtonEnum.Ok);
             var result = box.ShowAsync();
         }
+    }
+    public string GetUserNameFromDatabase(string login)
+    {
+        string username = ""; 
+        _database.openConnection(); 
+        string sql = "SELECT firstname FROM practice.client WHERE login = @login;";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        command.Parameters.AddWithValue("@login", login);
+        var result = command.ExecuteScalar();
+        if (result != null) 
+        {
+            username = result.ToString();
+        }
+        _database.closeConnection();
+        return username;
     }
     private int GetClientIdFromDatabase(string username)
     {

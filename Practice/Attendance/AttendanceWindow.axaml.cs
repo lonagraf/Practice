@@ -12,7 +12,7 @@ public partial class AttendanceWindow : UserControl
     private List<Attendance> _attendances = new List<Attendance>();
 
     private string fullTable =
-        "select attendance_id, start, end, concat(surname, ' ', firstname) as 'client' from practice.attendance " +
+        "select attendance_id, start, end, concat(surname, ' ', firstname) as 'client', attendance_status from practice.attendance " +
         "join practice.client c on c.client_id = attendance.client " +
         "join practice.schedule s on s.schedule_id = attendance.schedule;";
     public AttendanceWindow()
@@ -33,7 +33,8 @@ public partial class AttendanceWindow : UserControl
                 AttendanceID = reader.GetInt32("attendance_id"),
                 Start = reader.GetDateTime("start"),
                 End = reader.GetDateTime("end"),
-                Client = reader.GetString("client")
+                Client = reader.GetString("client"),
+                AttendanceStatus = reader.GetString("attendance_status")
             };
             _attendances.Add(currentAttendance);
         }

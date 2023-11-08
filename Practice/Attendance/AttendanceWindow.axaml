@@ -11,6 +11,7 @@
                 <DataGridTextColumn Header="Начало" Binding="{Binding Start}" />
                 <DataGridTextColumn Header="Конец" Binding="{Binding End}" />
                 <DataGridTextColumn Header="Клиент" Binding="{Binding Client}" />
+                <DataGridTextColumn Header="Посещение" Binding="{Binding AttendanceStatus}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

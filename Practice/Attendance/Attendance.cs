@@ -8,4 +8,5 @@ public class Attendance
     public DateTime Start { get; set; }
     public DateTime End { get; set; }
     public string Client { get; set; }
+    public string AttendanceStatus { get; set; }
 }

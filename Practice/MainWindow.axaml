@@ -50,6 +50,11 @@
                         <TextBlock Text="Группы"/>
                     </StackPanel>
                 </Button>
+                <Button Name="LogOutBtn" Width="30" Background="Lavender" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 100 0 0" Click="LogOutBtn_OnClick">
+                    <StackPanel>
+                        <Image Source="Icons/sign-out-alt.png" Width="20" Height="20" />
+                    </StackPanel>
+                </Button>
             </StackPanel>
             </Panel>
         </Grid>
