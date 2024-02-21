@@ -58,7 +58,7 @@ public partial class ClientWindow : UserControl
         AddClientWindow addWindow = new AddClientWindow();
         addWindow.Show();
     }
-    public void Delete(int id)
+    public bool Delete(int id)
     {
         try
         {
@@ -66,14 +66,18 @@ public partial class ClientWindow : UserControl
             string sql = "delete from practice.client where client_id = @clientId;";
             MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
             command.Parameters.AddWithValue("@clientId", id);
-            command.ExecuteNonQuery();
+            int rowsAffected = command.ExecuteNonQuery();
             _database.closeConnection();
+
+            return rowsAffected > 0; // Возвращаем true, если удаление прошло успешно
         }
         catch (Exception ex)
         {
             Console.WriteLine("Ошибка при удалении: " + ex.Message);
+            return false; // Возвращаем false в случае ошибки
         }
     }
+    
     private async void DeleteBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         try
@@ -86,10 +90,17 @@ public partial class ClientWindow : UserControl
                 var result = await warning.ShowAsync();
                 if (result == ButtonResult.Yes)
                 {
-                    Delete(selectedClient.ClientID);
-                    ShowTable(fullTable);
-                    var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Клиент успешно удален!", ButtonEnum.Ok);
-                    var successResult = box.ShowAsync();
+                    if (Delete(selectedClient.ClientID))
+                    {
+                        ShowTable(fullTable);
+                        var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Клиент успешно удален!", ButtonEnum.Ok);
+                        var successResult = box.ShowAsync();
+                    }
+                    else
+                    {
+                        var errorBox = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Не удалось удалить клиента", ButtonEnum.Ok);
+                        var errorResult = errorBox.ShowAsync();
+                    }
                 }
                 else
                 {
@@ -109,6 +120,7 @@ public partial class ClientWindow : UserControl
             throw;
         }
     }
+
     private void EditBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         Client selectedClient = ClientDataGrid.SelectedItem as Client;

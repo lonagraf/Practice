@@ -8,7 +8,7 @@
         <Grid>
             <Panel Name="MainPanel" Background="White" Margin=" 200 0 0 0" Width="1000" Height="450">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Name="WelcomeTxt" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Name="WelcomeTxt" FontSize="20" FontWeight="Bold" />
                 </StackPanel>
             </Panel>
             <Panel Name="MenuPanel" Background="Lavender" Width="200" Height="450" HorizontalAlignment="Left">
